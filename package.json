@@ -1,14 +1,10 @@
 {
-  "name": "station-electron",
+  "name": "icdao",
   "version": "1.2.0",
-  "description": "Wallet for Terra Blockchain",
-  "author": "Terraform Labs Pte. Ltd. <engineering@terra.money> (https://terra.money)",
+  "description": "icdao",
+  "author": "codewizard",
   "license": "MIT",
   "main": "public/electron.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/terra-money/station-desktop.git"
-  },
   "dependencies": {
     "bech32": "^2.0.0",
     "bip32": "^2.0.4",
@@ -24,6 +20,7 @@
   },
   "scripts": {
     "start": "electron .",
+    "build": "electron-builder -l --config build-windows.json",
     "build-linux": "electron-builder -l --config build-linux.json",
     "build-macwin": "electron-builder -mw --config build-macwin.json",
     "postinstall": "electron-builder install-app-deps",
